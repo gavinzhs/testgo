@@ -2,8 +2,7 @@ package main
 import (
     "testing"
     "net/http"
-    "io"
-    "log")
+    "io")
 
 func TestHttps(t *testing.T){
 
