@@ -6,8 +6,8 @@ import (
 	"log"
 	"net"
 	"os"
-//	"strings"
-//	"time"
+	//	"strings"
+	//	"time"
 )
 
 func main() {
@@ -99,20 +99,20 @@ func main() {
 					fmt.Print("Message from server: " + string(b))
 				}
 
-//				fmt.Print("Message Received:", string(message))
-//
-//				// sample process for string received
-//				newmessage := strings.ToUpper(string(message))
-//
-//				if newmessage == "" {
-//					log.Print("收到数据为空    算了")
-//					continue
-//				}
-//				// send new string back to client
-//				for {
-//					time.Sleep(time.Second * 10)
-//					conn.Write([]byte(newmessage))
-//				}
+				//				fmt.Print("Message Received:", string(message))
+				//
+				//				// sample process for string received
+				//				newmessage := strings.ToUpper(string(message))
+				//
+				//				if newmessage == "" {
+				//					log.Print("收到数据为空    算了")
+				//					continue
+				//				}
+				//				// send new string back to client
+				//				for {
+				//					time.Sleep(time.Second * 10)
+				//					conn.Write([]byte(newmessage))
+				//				}
 			}
 		}(conn)
 

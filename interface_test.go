@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"log"
 	"testing"
-    )
+)
 
 func TestInterface(t *testing.T) {
 	log.Println("test interface")
@@ -33,7 +33,7 @@ type circle struct {
 	r int
 }
 
-func TestHttp1(t *testing.T){
+func TestHttp1(t *testing.T) {
 
 }
 

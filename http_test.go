@@ -1,14 +1,9 @@
 package main
 
 import (
-    "testing"
+	"testing"
 )
 
-func TestHttp(t *testing.T){
-
-
-
-
-
+func TestHttp(t *testing.T) {
 
 }
