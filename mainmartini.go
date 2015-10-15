@@ -10,7 +10,7 @@ import (
 	//	"time"
 )
 
-func main() {
+func main2() {
 	//	m := martini.Classic()
 	//	m.Get("/m", testHandler)
 	//	m.Get("/m/main", testMainHandler)
