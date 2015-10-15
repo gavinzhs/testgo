@@ -28,4 +28,5 @@ _testmain.go
 .idea
 testgo.iml
 .DS_Store
+session
 
