@@ -5,7 +5,7 @@ import (
     _ "testgo/session/driver"
     "log")
 
-func mainsession(){
+func main(){
     print("start")
 
     manager, err := session.NewManager("memory", "test-session", 3600)
