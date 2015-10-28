@@ -1,9 +1,10 @@
 package main
 
 import (
-    "testing"
-    "net/http"
-    "io")
+	"io"
+	"net/http"
+	"testing"
+)
 
 func TestHttps(t *testing.T) {
 
