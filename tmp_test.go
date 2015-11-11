@@ -123,8 +123,6 @@ func TestFile(t *testing.T) {
 
 	//不同编码的读与写
 
-
-
 }
 
 func TestEncoding(t *testing.T) {
@@ -220,7 +218,7 @@ func TestMutex(t *testing.T) {
 	time.Sleep(time.Second * 10)
 }
 
-func TestOperator(t *testing.T){
-    str := `go "10"`
-    log.Println(string(str))
+func TestOperator(t *testing.T) {
+	str := `go "10"`
+	log.Println(string(str))
 }
