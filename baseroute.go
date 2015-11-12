@@ -44,7 +44,7 @@ type Person struct {
 }
 
 func initDB() {
-	session, err := mgo.Dial("test:test@182.92.166.138/test")
+	session, err := mgo.Dial("testadmin:testadmin@127.0.0.1:27017/test")
 	if err != nil {
 		panic(err)
 	}

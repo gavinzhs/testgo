@@ -8,7 +8,7 @@ import (
 )
 
 func TestBaseroute(t *testing.T) {
-	//	initDB()
+	initDB()
 	port := os.Getenv("PORT")
 	if port == "" {
 		port = "4000"
