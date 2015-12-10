@@ -16,7 +16,8 @@ import (
 	"sync"
 	"testing"
 	"time"
-)
+    "net/http"
+    "github.com/go-martini/martini")
 
 func TestSessionId(t *testing.T) {
 	log.Println("start")
@@ -221,4 +222,23 @@ func TestMutex(t *testing.T) {
 func TestOperator(t *testing.T) {
 	str := `go "10"`
 	log.Println(string(str))
+}
+
+//test 时间单位/utc与local的区别     utc是世界标准时间       local是北京时间      北京时间比世界标准时早8个小时     所以用世界标准时间减去8个小时就是北京时间
+//时间单位有秒   毫秒     微秒   纳秒       差1000呗        unix时间为秒     js中返回的时间是毫秒数    好多地方记录的时候使用毫秒     包支持秒以及纳秒   所以用纳秒除以10*1e6   会得到一个整数int64位的
+func TestTimeUnit(tt *testing.T){
+    t := time.Now()
+    log.Println()
+    log.Println(t.UnixNano())
+    log.Println(t.Local().Unix())
+    log.Println(t.UTC().Unix())
+}
+
+func TestMartini(t *testing.T){
+    m := martini.Classic()
+    m.Get("/m", testHandler)
+    m.Get("/m/main", testMainHandler)
+    http.Handle("/m/", m)
+
+    http.ListenAndServe("localhost:3000", nil)
 }
