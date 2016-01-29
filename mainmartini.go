@@ -8,7 +8,7 @@ import (
 	"os"
 	//	"strings"
 	//	"time"
-)
+    "encoding/json")
 
 func main2() {
 	//	m := martini.Classic()
@@ -128,7 +128,12 @@ func checkMainError(err error) {
 }
 
 func testHandler() string {
-	return "hello world"
+	return `<?xml version="1.0" encoding="gb2312"?>
+<property>
+<returncode>200 郑赛</returncode>
+<key>baidu.com</key>
+<original>211 : Domain exists</original>
+</property>`
 }
 
 func testM1Handler() string {
@@ -136,7 +141,17 @@ func testM1Handler() string {
 }
 
 func testMainHandler() string {
-	return "hello world man !!!"
+
+    fsfs := float64(1234567.8)
+    println(fsfs)
+    fmt.Println(fsfs)
+    var f interface{}
+    json.Unmarshal([]byte(`{"aa":1234567.8}`), &f)
+    if m, ok := (f).(map[string]interface{}); ok {
+        fmt.Println(m)
+    }
+    b, _ := json.Marshal(f)
+	return string(b)
 }
 
 func testMainM2Handler() string {
